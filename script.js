@@ -6,20 +6,32 @@ const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
   let addMore = true;
 
-    const employees = []
-    while (addMore) {
+  const employees = []
+
+  while (addMore) {
+
     const firstName = prompt(`First Name`);
     const lastName = prompt(`Last Name`);
-    const salary = prompt(`Salary`);
+    let salaryInput = prompt(`Salary`);
+    let salary = parseFloat(salaryInput);
+
+    if (isNaN(salary)) {
+      salary = 0;
+    }
+
 
     employees.push({
       firstName: firstName,
       lastName: lastName,
-      salary: salary,
+      salary: salary, 
     });
+
     addMore = confirm("Would you like to add more employees?");
+
   }
+
   return employees;
+  
 }
 
 // Display the average salary
