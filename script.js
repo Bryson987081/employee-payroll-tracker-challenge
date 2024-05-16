@@ -38,11 +38,12 @@ const displayAverageSalary = function (employees) {
   function calculateAverageSalary(employees) {
     const totalSalaries = employees.reduce((acc, employees) => acc + employees.salary, 0);
     const averageSalary = totalSalaries / employees.length;
-    return averageSalary;
+    const averageAsWholeNumber = Math.round(averageSalary);
+    return averageAsWholeNumber;
   }
 
-  const averageSalary =calculateAverageSalary(employees);
-  console.log("The average salary is :", averageSalary);
+  const averageAsWholeNumber =calculateAverageSalary(employees);
+  console.log("The average salary is :", averageAsWholeNumber);
 }
 
 // Select a random employee
