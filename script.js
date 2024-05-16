@@ -14,9 +14,9 @@ const collectEmployees = function () {
     const lastName = prompt(`Last Name`);
     let salaryInput = prompt(`Salary`);
     let salary = parseFloat(salaryInput);
-
     if (isNaN(salary)) {
       salary = 0;
+      lastName.sort();
     }
 
 
@@ -37,12 +37,17 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+ 
+
 }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+
 }
+
+
 //Apabetical last//
 /*
   ====================
