@@ -15,8 +15,6 @@ const collectEmployees = function () {
     let salaryInput = prompt(`Salary`);
     let salary = parseFloat(salaryInput);
     if (isNaN(salary)) {
-      salary = 0;
-      lastName.sort();
     }
 
 
@@ -35,19 +33,23 @@ const collectEmployees = function () {
 }
 
 // Display the average salary
-const displayAverageSalary = function (employeesArray) {
+const displayAverageSalary = function (employees) {
   // TODO: Calculate and display the average salary
- 
+  function calculateAverageSalary(employees) {
+    const totalSalaries = employees.reduce((acc, employees) => acc + employees.salary, 0);
+    const averageSalary = totalSalaries / employees.length;
+    return averageSalary;
+  }
+  const employeesArray = []
 
+  const averageSalary =calculateAverageSalary(employees);
+  console.log("The average salary is :", averageSalary);
 }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
-
 }
-
-
 //Apabetical last//
 /*
   ====================
